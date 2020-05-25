@@ -1,0 +1,10 @@
+version: '3'
+services:
+  mdbook:
+    build:
+      context: .
+    ports:
+      - 3000:3000
+    volumes:
+        - .:/book
+    command: 'mdbook serve -p 3000 -n 0.0.0.0'
